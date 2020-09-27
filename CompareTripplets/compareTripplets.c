@@ -45,23 +45,18 @@ char** split_string(char*);
  */
 int* compareTriplets(int a_count, int* a, int b_count, int* b, int* result_count) {
 
-    *result_count = 2;
-    int Acount = 0;
-    int Bcount = 0;
 
-    int *data = malloc(2 * sizeof(int));
-    for (int i = 0; i < Acount; ++i){
-        if (*(a+i) > *(b+i))
-            ++Acount;
-        else if (*(b+i) > *(a+i))
-            ++Bcount;
-        else
-            ;
-    }
-    *(data+0) = Acount;
-    *(data+1) = Bcount;
+    int i, a_score = 0, b_score = 0;
 
-    return data;
+    for (i = 0; i < b_count; i++) 
+        (a[i] > b[i]) ? a_score++ : b_score++ ;
+       
+
+
+    result_count[0] = a_score;
+    result_count[1] = b_score;
+
+    return result_count;
 
 }
 
