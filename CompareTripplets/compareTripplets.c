@@ -56,7 +56,7 @@ int* compareTriplets(int a_count, int* a, int b_count, int* b, int* result_count
     result_count[0] = a_score;
     result_count[1] = b_score;
 
-    return result_counti;
+    return result_count;
 
 }
 
