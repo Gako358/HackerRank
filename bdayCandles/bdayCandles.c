@@ -17,7 +17,7 @@
  */
 
 int birthdayCakeCandles(int candles_count, int* candles) {
-    int num, i, max = 0, max_count =0;
+    int i, max = 0, max_count =0;
     for (i = 0; i < candles_count; i++){
         if (candles[i] > max)
             max = candles[i];
